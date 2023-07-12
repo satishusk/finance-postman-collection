@@ -1,0 +1,1206 @@
+{
+	"info": {
+		"_postman_id": "671da821-fed0-43b2-9e55-65c4ba4ba6ad",
+		"name": "finance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22928558"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test\",\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user-service-domain}}/api/v1/users/signup",
+							"host": [
+								"{{user-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user-service-domain}}/api/v1/users/login",
+							"host": [
+								"{{user-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"haroldhernandez@gmail.com\",\r\n    \"password\": \"#BEtEjwKwN8LmZr25m{1~I\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user-service-domain}}/api/v1/users/login",
+							"host": [
+								"{{user-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{user-service-domain}}/api/v1/users/refresh",
+							"host": [
+								"{{user-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{user-service-domain}}/api/v1/users/logout",
+							"host": [
+								"{{user-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "budget",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"financialGoal\": \"Buy a car\",\r\n    \"duration\": \"month\",\r\n    \"currency\": \"rub\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets?diapason=2",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets"
+							],
+							"query": [
+								{
+									"key": "diapason",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sample-without-params",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sample-common",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets?diapason=2",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets"
+							],
+							"query": [
+								{
+									"key": "diapason",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"financialGoal\": \"123123\",\r\n    \"duration\": \"year\",\r\n    \"currency\": \"usd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expense-plans/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"expense-plans",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/income-plans/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"income-plans",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-income",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/incomes/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"incomes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-expense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expenses/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"expenses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-income-plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/income-plans/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"income-plans",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-expense-plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expense-plans/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"expense-plans",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-currency",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/currency",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"currency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-incomes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/incomes/2023-07:year",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"incomes",
+								"2023-07:year"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-expenses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expenses/2023-07:year",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"expenses",
+								"2023-07:year"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/balance",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-income-plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/income-plans/2023-07",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"income-plans",
+								"2023-07"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-expense-plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expense-plans/2023-07",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets",
+								"1",
+								"expense-plans",
+								"2023-07"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "analysis",
+			"item": [
+				{
+					"name": "diff-by-period",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{analysis-service-domain}}/api/v1/analysis/budgets/1/diff/2023-06:year",
+							"host": [
+								"{{analysis-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analysis",
+								"budgets",
+								"1",
+								"diff",
+								"2023-06:year"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "operations-by-period",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{analysis-service-domain}}/api/v1/analysis/budgets/1/operations/2023-07:month",
+							"host": [
+								"{{analysis-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analysis",
+								"budgets",
+								"1",
+								"operations",
+								"2023-07:month"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{analysis-service-domain}}/api/v1/analysis/budgets/1/balance",
+							"host": [
+								"{{analysis-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analysis",
+								"budgets",
+								"1",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "planned-by-actual-incomes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{analysis-service-domain}}/api/v1/analysis/budgets/1/planned-by-actual-incomes/2023-07/salary",
+							"host": [
+								"{{analysis-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analysis",
+								"budgets",
+								"1",
+								"planned-by-actual-incomes",
+								"2023-07",
+								"salary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "planned-by-actual-expenses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{analysis-service-domain}}/api/v1/analysis/budgets/1/planned-by-actual-expenses/2023-07/food",
+							"host": [
+								"{{analysis-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analysis",
+								"budgets",
+								"1",
+								"planned-by-actual-expenses",
+								"2023-07",
+								"food"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "income",
+			"item": [
+				{
+					"name": "plan",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"limit\": {\r\n        \"value\": \"30000\",\r\n        \"currency\": \"rub\"\r\n    },\r\n    \"period\": \"month\",\r\n    \"category\": \"salary\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/income-plans?offset=1&diapason=2",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"income-plans"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "1"
+										},
+										{
+											"key": "diapason",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sample-without-params",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/income-plans",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"income-plans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sample-common",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/income-plans?offset=1&diapason=2",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"income-plans"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "1"
+										},
+										{
+											"key": "diapason",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"limit\": {\r\n        \"value\": \"9999\",\r\n        \"currency\": \"rub\"\r\n    },\r\n    \"period\": \"month\",\r\n    \"category\": \"salary\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/income-plans/1",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"income-plans",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/income-plans/1",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"income-plans",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Salary\",\r\n    \"description\": \"My first salary\",\r\n    \"source\": \"Work\",\r\n    \"incomeCategory\": \"salary\",\r\n    \"amount\": {\r\n        \"value\": \"60000\",\r\n        \"currency\": \"rub\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/incomes",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incomes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sample-without-params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/incomes",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incomes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sample-common",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/incomes?offset=1&diapason=2",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incomes"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "1"
+								},
+								{
+									"key": "diapason",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"UPDATE123\",\r\n    \"description\": \"UPDATE DESCRIPTION\",\r\n    \"source\": \"UPDATE\",\r\n    \"incomeCategory\": \"another\",\r\n    \"amount\": {\r\n        \"value\": \"3000000000023130\",\r\n        \"currency\": \"rub\"\r\n    }\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/incomes/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incomes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/incomes/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incomes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "expense",
+			"item": [
+				{
+					"name": "plan",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"limit\": {\r\n        \"value\": \"9999\",\r\n        \"currency\": \"rub\"\r\n    },\r\n    \"category\": \"food\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/expense-plans",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"expense-plans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sample-without-params",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/expense-plans",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"expense-plans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sample-common",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/expense-plans?offset=1&diapason=2",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"expense-plans"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "1"
+										},
+										{
+											"key": "diapason",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"limit\": {\r\n        \"value\": \"9999\",\r\n        \"currency\": \"rub\"\r\n    },\r\n    \"period\": \"month\",\r\n    \"category\": \"housing\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/expense-plans/1",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"expense-plans",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{budget-service-domain}}/api/v1/expense-plans/1",
+									"host": [
+										"{{budget-service-domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"expense-plans",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Food\",\r\n    \"description\": \"My first food\",\r\n    \"paymentMethod\": \"cash\",\r\n    \"expenseCategory\": \"food\",\r\n    \"amount\": {\r\n        \"value\": \"35710\",\r\n        \"currency\": \"rub\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/expenses",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sample-without-params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/expenses",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sample-common",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/expenses?offset=1&diapason=2",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"expenses"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "1"
+								},
+								{
+									"key": "diapason",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"RamenUPDATED\",\r\n    \"description\": \"My first ramen\",\r\n    \"paymentMethod\": \"check\",\r\n    \"expenseCategory\": \"food\",\r\n    \"amount\": {\r\n        \"value\": \"150000000000\",\r\n        \"currency\": \"usd\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/expenses/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"expenses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{budget-service-domain}}/api/v1/expenses/1",
+							"host": [
+								"{{budget-service-domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"expenses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJ1c2VySWQiOjUyLCJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY4OTE2NzU5NSwiZXhwIjoxNjg5MTY4NDk1fQ.QMdMas6gp5hNtAVdH6kV9sOYD_tu247YQTdb6bK5VubfVMm09PBqu9nu-_2qj1KD26IIssgos6lM9YcrlkNTVA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "proxy-domain",
+			"value": "localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "user-service-domain",
+			"value": "localhost:8001",
+			"type": "string"
+		},
+		{
+			"key": "budget-service-domain",
+			"value": "localhost:8002",
+			"type": "string"
+		},
+		{
+			"key": "analysis-service-domain",
+			"value": "localhost:8003",
+			"type": "string"
+		}
+	]
+}
