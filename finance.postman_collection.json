@@ -229,6 +229,16 @@
 				{
 					"name": "update",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJ1c2VySWQiOjUsInN1YiI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNjg5MjU0Mjc1LCJleHAiOjE2ODkyNTUxNzV9.dGskpjdFFI8DYftPYCk1AkNXS3N5JIb4mSlQ5au_zZFKluCR-46vj8s0c05N2eobAmW_g_jKNywptuPP6JrcvQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -241,7 +251,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expense-plans/1",
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1",
 							"host": [
 								"{{budget-service-domain}}"
 							],
@@ -249,8 +259,6 @@
 								"api",
 								"v1",
 								"budgets",
-								"1",
-								"expense-plans",
 								"1"
 							]
 						}
@@ -1156,7 +1164,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzUxMiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJ1c2VySWQiOjUyLCJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY4OTE2NzU5NSwiZXhwIjoxNjg5MTY4NDk1fQ.QMdMas6gp5hNtAVdH6kV9sOYD_tu247YQTdb6bK5VubfVMm09PBqu9nu-_2qj1KD26IIssgos6lM9YcrlkNTVA",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJ1c2VySWQiOjUsInN1YiI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNjg5MjU0Mjc1LCJleHAiOjE2ODkyNTUxNzV9.dGskpjdFFI8DYftPYCk1AkNXS3N5JIb4mSlQ5au_zZFKluCR-46vj8s0c05N2eobAmW_g_jKNywptuPP6JrcvQ",
 				"type": "string"
 			}
 		]
