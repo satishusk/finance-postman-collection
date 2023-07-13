@@ -229,16 +229,6 @@
 				{
 					"name": "update",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJ1c2VySWQiOjUsInN1YiI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNjg5MjU0Mjc1LCJleHAiOjE2ODkyNTUxNzV9.dGskpjdFFI8DYftPYCk1AkNXS3N5JIb4mSlQ5au_zZFKluCR-46vj8s0c05N2eobAmW_g_jKNywptuPP6JrcvQ",
-									"type": "string"
-								}
-							]
-						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -271,7 +261,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/income-plans/1",
+							"raw": "{{budget-service-domain}}/api/v1/budgets/1",
 							"host": [
 								"{{budget-service-domain}}"
 							],
@@ -279,8 +269,6 @@
 								"api",
 								"v1",
 								"budgets",
-								"1",
-								"income-plans",
 								"1"
 							]
 						}
