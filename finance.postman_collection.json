@@ -362,136 +362,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "get-currency",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/currency",
-							"host": [
-								"{{budget-service-domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"budgets",
-								"1",
-								"currency"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get-incomes",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/incomes/2023-07:year",
-							"host": [
-								"{{budget-service-domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"budgets",
-								"1",
-								"incomes",
-								"2023-07:year"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get-expenses",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expenses/2023-07:year",
-							"host": [
-								"{{budget-service-domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"budgets",
-								"1",
-								"expenses",
-								"2023-07:year"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get-balance",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/balance",
-							"host": [
-								"{{budget-service-domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"budgets",
-								"1",
-								"balance"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get-income-plans",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/income-plans/2023-07",
-							"host": [
-								"{{budget-service-domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"budgets",
-								"1",
-								"income-plans",
-								"2023-07"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get-expense-plans",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{budget-service-domain}}/api/v1/budgets/1/expense-plans/2023-07",
-							"host": [
-								"{{budget-service-domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"budgets",
-								"1",
-								"expense-plans",
-								"2023-07"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -637,7 +507,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{budget-service-domain}}/api/v1/income-plans?offset=1&diapason=2",
+									"raw": "{{budget-service-domain}}/api/v1/income-plans",
 									"host": [
 										"{{budget-service-domain}}"
 									],
@@ -645,16 +515,6 @@
 										"api",
 										"v1",
 										"income-plans"
-									],
-									"query": [
-										{
-											"key": "offset",
-											"value": "1"
-										},
-										{
-											"key": "diapason",
-											"value": "2"
-										}
 									]
 								}
 							},
@@ -1152,7 +1012,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzUxMiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJ1c2VySWQiOjUsInN1YiI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNjg5MjU0Mjc1LCJleHAiOjE2ODkyNTUxNzV9.dGskpjdFFI8DYftPYCk1AkNXS3N5JIb4mSlQ5au_zZFKluCR-46vj8s0c05N2eobAmW_g_jKNywptuPP6JrcvQ",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJ1c2VySWQiOjUsInN1YiI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNjg5MjU1MzY3LCJleHAiOjE2ODkyNTYyNjd9.CJD1A7KsfIOB9QIXILhUSEF0RUSchiZMpVVv6-dq4MGIqYDV213BDLOJQ_ZLvw4NktcWvD7Z5FrDYffvgRMzTw",
 				"type": "string"
 			}
 		]
